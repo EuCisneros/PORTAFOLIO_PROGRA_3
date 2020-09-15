@@ -1,132 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
     <TextView
-        android:id="@+id/lblnum1"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvTitulo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="40dp"
-        android:text="Num 1:" />
-
+        android:paddingTop="30sp"
+        android:text="@string/titulo"
+        android:textSize="24sp" />
     <EditText
-        android:id="@+id/txtnum1"
-        android:layout_width="wrap_content"
+        android:id="@+id/etNombre"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="30dp"
         android:ems="10"
-        android:hint="Numero"
-        android:inputType="numberDecimal" />
-
-    <TextView
-        android:id="@+id/lblnum2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Num 2:"
-        android:layout_marginTop="120dp"
-        android:layout_marginLeft="20dp"/>
-
+        android:inputType="textPersonName"
+        android:paddingTop="20sp"
+        android:hint="@string/nombre"
+        />
     <EditText
-        android:id="@+id/txtnum2"
-        android:layout_width="wrap_content"
+        android:id="@+id/etEdad"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="110dp"
         android:ems="10"
-        android:hint="Numero"
-        android:inputType="numberDecimal" />
-
+        android:inputType="textPersonName"
+        android:paddingTop="20sp"
+        android:hint="@string/edad" />
     <Button
-        android:id="@+id/btnCalcular"
-        android:layout_width="123dp"
-        android:layout_height="73dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="500dp"
-        android:onClick="procesar"
-        android:text="Procesar" />
-
-    <TextView
-        android:id="@+id/lblRespuesta"
-        android:layout_width="94dp"
-        android:layout_height="31dp"
-        android:layout_marginLeft="160dp"
-        android:layout_marginTop="600dp"
-        android:text="Respuesta: ?" />
-
-    <RadioGroup
-        android:id="@+id/optOperaciones"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="180dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-
-        <RadioButton
-            android:id="@+id/optSuma"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Suma"
-            android:checked="true"/>
-
-        <RadioButton
-            android:id="@+id/optResta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Resta" />
-
-        <RadioButton
-            android:id="@+id/optMultiplicar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Multiplicacion" />
-
-        <RadioButton
-            android:id="@+id/optDivision"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Division" />
-
-        <RadioButton
-            android:id="@+id/optResiduo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="Residuo" />
-
-        <RadioButton
-            android:id="@+id/optPorcentaje"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="Porcentaje" />
-
-        <RadioButton
-            android:id="@+id/optExponencia"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="Exponencia" />
-
-        <RadioButton
-            android:id="@+id/optFactoreo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="Factoreo" />
-
-    </RadioGroup>
-
-    <Spinner
-        android:id="@+id/cboOperaciones"
-        android:layout_width="wrap_content"
+        android:id="@+id/btEnviarDatos"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="190dp"
-        android:layout_marginTop="180dp"
-        android:entries="@array/operaciones" />
+        android:paddingTop="30sp"
+        android:text="@string/enviarDatos" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/estudent" />
+</LinearLayout>
 
-</RelativeLayout>
+<resources>
+<string name="app_name">Entre dos activitys</string>
+<string name="titulo">DETERMINAR SI ES MAYOR DE EDAD</string>
+<string name="nombre">Escriba su nombre</string>
+<string name="edad">Escriba su edad</string>
+<string name="enviarDatos">ENVIAR DATOS</string>
+<string name="volver">PANTALLA ANTERIOR</string>
+</resources>
